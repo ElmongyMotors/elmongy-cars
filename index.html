@@ -1,53 +1,85 @@
+Отлично! Ваше фото Hyundai Palisade успешно загружено. Теперь у нас есть прямая ссылка на него, и мы можем вставить её в код, чтобы на сайте вместо пустой картинки красовался ваш автомобиль.
+
+Также я доработал код, добавив навигационное меню. Теперь при нажатии на пункты «О нас», «Каталог» или «Процесс», страница будет сама прокручиваться к нужному тексту.
+
+Что нужно сделать сейчас:
+Скопируйте весь код ниже.
+
+Вставьте его в ваш файл index.html на GitHub (через кнопку-карандаш).
+
+Сохраните изменения (Commit changes).
+
+HTML
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Elmongy Motors — Авто из Кореи</title>
+  <title>Elmongy Motors — Автомобили из Южной Кореи</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+    
+    /* Базовые стили */
     body { margin: 0; font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; scroll-behavior: smooth; }
     
+    /* Шапка и Меню */
     nav {
       display: flex; justify-content: space-between; align-items: center;
-      padding: 10px 5%; background: rgba(0,0,0,0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222;
+      padding: 15px 5%; background: rgba(0,0,0,0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222;
     }
-    .logo-box { display: flex; align-items: center; }
-    .logo-box img { height: 45px; margin-right: 12px; }
-    .logo-text { font-weight: 900; font-size: 20px; text-transform: uppercase; letter-spacing: 1px; }
+    .logo-box { display: flex; align-items: center; text-decoration: none; color: #fff; }
+    .logo-box img { height: 40px; margin-right: 12px; }
+    
+    .nav-links { display: flex; gap: 25px; }
+    .nav-links a { color: #bbb; text-decoration: none; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+    .nav-links a:hover { color: #e63946; }
 
-    .social-icons a { color: #fff; margin-left: 18px; font-size: 22px; transition: 0.3s; text-decoration: none; }
+    .social-icons a { color: #fff; margin-left: 15px; font-size: 18px; transition: 0.3s; }
     .social-icons a:hover { color: #e63946; }
 
+    /* Секции */
     header {
-      background: linear-gradient(rgba(0,0,0,0.4), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=2070');
-      background-size: cover; background-position: center; padding: 100px 5%; text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=2070');
+      background-size: cover; background-position: center; padding: 120px 5%; text-align: center;
     }
-    h1 { font-size: 50px; font-weight: 900; text-transform: uppercase; margin: 0; }
+    h1 { font-size: 45px; font-weight: 900; text-transform: uppercase; margin: 0; }
     .accent { color: #e63946; }
 
-    section { padding: 60px 5%; max-width: 1200px; margin: 0 auto; }
-    h2 { font-size: 32px; font-weight: 900; text-transform: uppercase; margin-bottom: 40px; border-left: 5px solid #e63946; padding-left: 20px; }
+    section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+    h2 { font-size: 32px; font-weight: 900; text-transform: uppercase; margin-bottom: 30px; border-left: 5px solid #e63946; padding-left: 20px; }
+    p { font-size: 18px; line-height: 1.8; color: #ccc; }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    /* Карточки авто */
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
     .car-card { background: #161616; padding: 20px; border-radius: 20px; border: 1px solid #222; }
-    .car-card img { width: 100%; border-radius: 12px; height: 200px; object-fit: cover; }
-    .price { color: #e63946; font-weight: 900; font-size: 24px; margin-top: 10px; }
+    .car-card img { width: 100%; border-radius: 12px; height: 250px; object-fit: cover; border: 1px solid #333; }
+    .price { color: #e63946; font-weight: 900; font-size: 24px; margin-top: 15px; }
 
-    .form-container { background: #e63946; padding: 40px; border-radius: 25px; text-align: center; margin-top: 40px; }
-    input { width: 100%; padding: 18px; margin-bottom: 12px; border-radius: 10px; border: none; font-size: 16px; box-sizing: border-box; }
-    .btn-send { background: #000; color: #fff; border: none; padding: 20px; border-radius: 10px; font-weight: 900; text-transform: uppercase; cursor: pointer; width: 100%; }
+    /* Форма */
+    .form-container { background: #e63946; padding: 50px; border-radius: 30px; text-align: center; margin-top: 50px; }
+    input { width: 100%; padding: 18px; margin-bottom: 15px; border-radius: 12px; border: none; font-size: 16px; box-sizing: border-box; }
+    .btn-send { background: #000; color: #fff; border: none; padding: 20px; border-radius: 12px; font-weight: 900; text-transform: uppercase; cursor: pointer; width: 100%; transition: 0.3s; }
+    .btn-send:hover { opacity: 0.8; }
+
+    @media (max-width: 768px) { .nav-links { display: none; } }
   </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo-box">
-    <img src="https://i.ibb.co/LkhYt6P/logo.png" alt="Elmongy Logo">
-    <div class="logo-text">ELMONGY <span class="accent">MOTORS</span></div>
-  </div>
+  <a href="#" class="logo-box">
+    <img src="https://i.ibb.co/LkhYt6P/logo.png" alt="Logo">
+    <span style="font-weight:900;">ELMONGY MOTORS</span>
+  </a>
   
+  <div class="nav-links">
+    <a href="#about">О нас</a>
+    <a href="#catalog">Каталог</a>
+    <a href="#process">Процесс</a>
+    <a href="#order">Заявка</a>
+  </div>
+
   <div class="social-icons">
     <a href="https://api.whatsapp.com/send/?phone=821051068878" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="https://t.me/elmongy12" target="_blank"><i class="fab fa-telegram"></i></a>
@@ -57,27 +89,58 @@
 </nav>
 
 <header>
-  <h1>АВТОМОБИЛИ ИЗ <span class="accent">КОРЕИ</span></h1>
-  <p>Профессиональный подбор и доставка под ключ</p>
+  <h1>ЭКСПОРТ АВТОМОБИЛЕЙ <br>ИЗ <span class="accent">ЮЖНОЙ КОРЕИ</span></h1>
+  <p>Премиальный сервис подбора, проверки и доставки под ключ</p>
 </header>
 
-<section id="examples">
+<section id="about">
+  <h2>О компании</h2>
+  <p>
+    Elmongy Motors — ваш надежный представитель в Южной Корее. Мы специализируемся на поиске и экспорте автомобилей с внутреннего рынка. Находимся непосредственно в Корее (г. Инчхон), что позволяет нам лично проверять каждый автомобиль и гарантировать его качество клиенту.
+  </p>
+</section>
+
+<section id="catalog">
   <h2>Примеры авто</h2>
   <div class="grid">
     <div class="car-card">
-      <img src="https://images.unsplash.com/photo-1707156372103-689369324021" alt="Palisade">
+      <img src="https://i.ibb.co/v4pXfH8m/image-415d90.png" alt="Hyundai Palisade">
       <h3>Hyundai Palisade 2026</h3>
+      <p>Комплектация: Calligraphy | 0 км</p>
       <div class="price">8.28 млн руб.</div>
     </div>
+    
     <div class="car-card">
-      <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb" alt="Carnival">
+      <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb" alt="Kia Carnival">
       <h3>Kia Carnival 2024</h3>
+      <p>Hi-Limousine | Дизель</p>
       <div class="price">от 4.5 млн руб.</div>
     </div>
   </div>
+</section>
 
+<section id="process">
+  <h2>Этапы работы</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+    <div style="background: #111; padding: 30px; border-radius: 20px;">
+      <h3 class="accent">01. Подбор</h3>
+      <p style="font-size: 16px;">Ищем варианты по вашим параметрам на всех площадках Кореи.</p>
+    </div>
+    <div style="background: #111; padding: 30px; border-radius: 20px;">
+      <h3 class="accent">02. Осмотр</h3>
+      <p style="font-size: 16px;">Выездная диагностика, проверка кузова и электроники.</p>
+    </div>
+    <div style="background: #111; padding: 30px; border-radius: 20px;">
+      <h3 class="accent">03. Отправка</h3>
+      <p style="font-size: 16px;">Оформление экспорта и бережная доставка в порт назначения.</p>
+    </div>
+  </div>
+</section>
+
+<section id="order">
   <div class="form-container">
-    <h2 style="border:none; padding:0; color:#fff; margin-bottom:10px;">Оставить заявку</h2>
+    <h2 style="border:none; padding:0; color:#fff; margin-bottom: 10px;">Оставить заявку</h2>
+    <p style="color: #fff; margin-bottom: 30px;">Мы свяжемся с вами в течение 30 минут</p>
     <form action="https://formspree.io/f/mqpelowa" method="POST">
       <input type="text" name="name" placeholder="Ваше имя" required>
       <input type="tel" name="phone" placeholder="Ваш WhatsApp / Телефон" required>
@@ -86,5 +149,10 @@
   </div>
 </section>
 
+<footer style="padding: 40px; text-align: center; border-top: 1px solid #222; opacity: 0.3;">
+  <p>© 2026 ELMONGY MOTORS | SOUTH KOREA</p>
+</footer>
+
 </body>
 </html>
+

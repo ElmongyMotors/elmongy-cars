@@ -48,17 +48,24 @@
     ul li i { color: #e63946; margin-right: 10px; }
     .info-box { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #222; margin-top: 30px; }
   </style>
-  .logo-box img {
-    display: block;
-    margin: 0 auto;    /* Центрирует логотип */
-    width: 200px;      /* Увеличьте это число для размера */
-    height: auto;
-}
-  .car-card img {
-    width: 100%;
-    height: 450px;      
-    object-fit: cover;  
-}
+  .logo-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрирует всё внутри */
+            text-align: center;
+        }
+
+        .logo-box img {
+            width: 250px;       /* Увеличили размер логотипа */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .car-card img {
+            width: 100%;
+            height: 450px;      /* Сделали картинки машин вытянутыми */
+            object-fit: cover;  /* Чтобы фото не растягивалось */
+        }
 </head>
 <body>
 
@@ -142,6 +149,7 @@
 
 </body>
 </html>
+
 
 
 

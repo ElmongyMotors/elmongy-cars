@@ -48,28 +48,35 @@
     ul li i { color: #e63946; margin-right: 10px; }
     .info-box { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #222; margin-top: 30px; }
    nav {
-       background: #000000 !important; /* Фон снова черный */
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       padding: 15px 0;
-       position: relative;
-       min-height: 100px; /* Увеличил высоту, чтобы логотипу было просторно */
-  }
+       nav {
+    background: #000000 !important; /* Черный фон */
+    display: flex;
+    justify-content: center; /* Центруем логотип */
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    min-height: 120px; /* Увеличили высоту для логотипа */
+}
 
-  .logo-box span {
-      color: #ffffff !important; /* Текст названия снова белый */
-      font-size: 16px;
-      font-weight: 900;
-      margin-top: 5px;
-      letter-spacing: 1px;
-      display: block;
- }
+.logo-box img {
+    width: 250px; /* ТУТ УВЕЛИЧИВАЕМ ЛОГОТИП */
+    height: auto;
+    mix-blend-mode: screen; /* УБИРАЕМ БЕЛЫЙ ФОН у картинки */
+}
 
- .social-icons a {
-     color: #ffffff !important; /* Иконки снова белые */
-     font-size: 20px;
-     margin-left: 15px;
+.social-icons {
+    position: absolute; /* ВЫРЫВАЕМ ИКОНКИ ИЗ ОБЩЕГО ПОТОКА */
+    right: 25px; /* ПРИЖИМАЕМ ВПРАВО */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #ffffff !important; /* Иконки снова белые */
+    font-size: 24px;
+}
  }
 
     .car-card img {
@@ -199,6 +206,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -48,31 +48,50 @@
     ul li i { color: #e63946; margin-right: 10px; }
     .info-box { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #222; margin-top: 30px; }
     nav {
-            background: #000000 !important; /* Делаем шапку снова черной */
+            background: #000000 !important;
+            display: flex;
+            justify-content: center; /* Центрирует только логотип */
+            align-items: center;
+            padding: 15px 0;
+            position: relative; /* Нужно для фиксации иконок сбоку */
+            min-height: 80px;
+        }
+
+        .logo-box {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 5px 0; /* Уменьшили отступы, чтобы шапка стала узкой */
-            border-bottom: 1px solid #333; /* Тонкая серая линия вместо яркой белой */
-        }
-
-        .logo-box span {
-            color: #ffffff !important; /* Возвращаем тексту белый цвет, чтобы он был виден на черном */
+            text-decoration: none;
         }
 
         .logo-box img {
-            width: 120px; /* Уменьшаем сам логотип, чтобы он не растягивал шапку */
+            width: 180px; /* Увеличили размер логотипа */
             height: auto;
-            margin-bottom: 0;
+            /* Если фон у картинки белый, эта строка немного поможет сгладить его: */
+            mix-blend-mode: screen; 
         }
 
         .logo-box span {
-            color: #ffffff !important; /* Текст станет белым */
+            color: #ffffff !important;
+            font-size: 16px;
+            font-weight: 900;
+            margin-top: 5px;
+            letter-spacing: 1px;
         }
-        .car-card img {
-            width: 100%;
-            height: 450px;      /* Сделали картинки машин вытянутыми */
-            object-fit: cover;  /* Чтобы фото не растягивалось */
+
+        .social-icons {
+            position: absolute; /* Вырываем иконки из общего потока */
+            right: 20px; /* Прижимаем к правому краю */
+            top: 50%;
+            transform: translateY(-50%); /* Центрируем по вертикали */
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 20px;
+            transition: 0.3s;
         }
     </style>
   </head>
@@ -163,6 +182,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -108,6 +108,29 @@
             text-align: center;
             padding-bottom: 15px;
         }
+    @media (max-width: 600px) {
+            nav {
+                flex-direction: column; /* Ставим логотип и иконки друг под другом */
+                padding: 10px 0;
+                height: auto;
+            }
+
+            .social-icons {
+                position: static; /* Возвращаем иконки в центр под логотип */
+                transform: none;
+                margin-top: 15px;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .logo-box img {
+                width: 140px; /* Немного уменьшаем логотип на мобильных */
+            }
+            
+            .car-card img {
+                height: 200px; /* Делаем карточки еще компактнее для телефонов */
+            }
+        }
     </style>
   </head>
 <body>
@@ -197,6 +220,7 @@
 
 </body>
 </html>
+
 
 
 

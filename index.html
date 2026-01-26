@@ -48,60 +48,69 @@
     ul li i { color: #e63946; margin-right: 10px; }
     .info-box { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #222; margin-top: 30px; }
    nav {
-       background: #ffffff !important; /* Фон стал белым */
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       padding: 10px 20px;
-       position: relative;
-       min-height: 120px;
-       border-bottom: 1px solid #ddd;
-    }
+    background: #ffffff !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Центрируем всё содержимое */
+    align-items: center;
+    padding: 20px;
+    min-height: 120px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
 
 .logo-box {
     display: flex;
-    flex-direction: row; /* Текст встает в линию с логотипом */
-    align-items: center; /* Выравнивание по центру по вертикали */
-    gap: 20px; /* Расстояние между картинкой и текстом */
+    flex-direction: row; /* Лого и текст в линию */
+    align-items: center;
+    gap: 20px;
     text-decoration: none;
+}
+
+.logo-box img {
+    width: 280px !important; /* ВЕРНУЛИ КРУПНЫЙ РАЗМЕР */
+    height: auto;
 }
 
 .logo-box span {
     color: #000000 !important;
-    font-size: 32px; /* КРУПНЫЙ ШРИФТ как у заголовка */
+    font-size: 32px;
     font-weight: 900;
-    text-transform: uppercase; /* Все буквы заглавные */
- @media (max-width: 768px) {
+}
+
+.social-icons {
+    position: absolute;
+    right: 30px; /* Иконки всегда справа */
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #000000 !important;
+    font-size: 28px; /* Сделали иконки крупнее */
+}
+
+/* ИСПРАВЛЕНИЕ ДЛЯ МОБИЛОК */
+@media (max-width: 768px) {
     nav {
         flex-direction: column !important;
         height: auto !important;
         padding: 15px !important;
-        min-height: unset !important;
     }
     .logo-box {
         flex-direction: column !important;
         margin: 0 auto 10px auto !important;
-        gap: 5px !important;
     }
     .logo-box img {
-        width: 140px !important; /* Уменьшили лого для мобилки */
-    }
-    .logo-box span {
-        font-size: 18px !important; /* Уменьшили текст */
-        text-align: center;
+        width: 160px !important; /* Оптимальный размер для телефона */
     }
     .social-icons {
-        position: relative !important;
-        right: auto !important;
-        top: auto !important;
-        transform: none !important;
-        display: flex !important;
+        position: relative !important; /* Возвращаем в поток */
+        right: auto !important;        /* Сбрасываем привязку к правому краю */
+        top: auto !important;          /* Сбрасываем привязку к верху */
+        margin: 0 auto !important;
+        display: flex !important;      /* Проявляем иконки */
         justify-content: center !important;
-        margin-top: 10px !important;
-    }
-    .social-icons a {
-        color: #000000 !important; /* Делаем иконки черными */
-        font-size: 22px !important;
     }
 }
 
@@ -237,6 +246,7 @@
 
 </body>
 </html>
+
 
 
 

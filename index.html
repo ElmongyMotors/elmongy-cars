@@ -48,30 +48,27 @@
     ul li i { color: #e63946; margin-right: 10px; }
     .info-box { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #222; margin-top: 30px; }
     nav {
-            background: #ffffff !important; /* Делает шапку черной */
+            background: #000000 !important; /* Делаем шапку снова черной */
             display: flex;
             flex-direction: column;
-            align-items: center; /* Центрирует логотип */
-            padding: 20px 0;
-            border-bottom: 1px solid #ddd;
+            align-items: center;
+            padding: 5px 0; /* Уменьшили отступы, чтобы шапка стала узкой */
+            border-bottom: 1px solid #333; /* Тонкая серая линия вместо яркой белой */
         }
 
         .logo-box span {
-            color: #000000 !important; /* Делает текст названия белым */
-        }
-  .logo-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Центрирует всё внутри */
-            text-align: center;
+            color: #ffffff !important; /* Возвращаем тексту белый цвет, чтобы он был виден на черном */
         }
 
         .logo-box img {
-            width: 250px;       /* Увеличили размер логотипа */
+            width: 120px; /* Уменьшаем сам логотип, чтобы он не растягивал шапку */
             height: auto;
-            margin-bottom: 10px;
+            margin-bottom: 0;
         }
 
+        .logo-box span {
+            color: #ffffff !important; /* Текст станет белым */
+        }
         .car-card img {
             width: 100%;
             height: 450px;      /* Сделали картинки машин вытянутыми */
@@ -166,6 +163,7 @@
 
 </body>
 </html>
+
 
 
 

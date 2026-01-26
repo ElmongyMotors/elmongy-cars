@@ -48,35 +48,38 @@
     ul li i { color: #e63946; margin-right: 10px; }
     .info-box { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #222; margin-top: 30px; }
    nav {
-       nav {
-    background: #000000 !important; /* Черный фон */
+      background: #000000 !important;
     display: flex;
-    justify-content: center; /* Центруем логотип */
+    justify-content: center; /* ЭТО СТАВИТ ВСЁ В ЦЕНТР */
     align-items: center;
     padding: 10px 20px;
     position: relative;
-    min-height: 120px; /* Увеличили высоту для логотипа */
+    min-height: 140px;
+    overflow: hidden;
 }
 
 .logo-box img {
-    width: 250px; /* ТУТ УВЕЛИЧИВАЕМ ЛОГОТИП */
+    width: 280px; /* Размер логотипа */
     height: auto;
-    mix-blend-mode: screen; /* УБИРАЕМ БЕЛЫЙ ФОН у картинки */
+    filter: brightness(1.1) contrast(1.1); /* Делает красный ярче */
+    mix-blend-mode: lighten; /* ДРУГОЙ РЕЖИМ: лучше убирает белый фон */
+    display: block;
+    margin: 0 auto;
 }
 
 .social-icons {
-    position: absolute; /* ВЫРЫВАЕМ ИКОНКИ ИЗ ОБЩЕГО ПОТОКА */
-    right: 25px; /* ПРИЖИМАЕМ ВПРАВО */
+    position: absolute;
+    right: 30px; /* ИКОНКИ УХОДЯТ ВПРАВО */
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     gap: 15px;
+    z-index: 10;
 }
 
 .social-icons a {
-    color: #ffffff !important; /* Иконки снова белые */
+    color: #ffffff !important;
     font-size: 24px;
-}
  }
 
     .car-card img {
@@ -206,6 +209,7 @@
 
 </body>
 </html>
+
 
 
 

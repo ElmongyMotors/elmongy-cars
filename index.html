@@ -71,6 +71,26 @@
     font-size: 32px; /* КРУПНЫЙ ШРИФТ как у заголовка */
     font-weight: 900;
     text-transform: uppercase; /* Все буквы заглавные */
+  @media (max-width: 768px) {
+    nav {
+        flex-direction: column !important;
+        height: auto !important;
+        padding: 20px 10px !important;
+    }
+    .logo-box {
+        flex-direction: column !important;
+        margin-bottom: 15px !important;
+        margin: 0 auto !important;
+    }
+    .logo-box span {
+        font-size: 24px !important;
+        text-align: center;
+    }
+    .social-icons {
+        position: static !important;
+        transform: none !important;
+        justify-content: center;
+    }
     letter-spacing: 1px;
 }
 
@@ -221,6 +241,7 @@
 
 </body>
 </html>
+
 
 
 

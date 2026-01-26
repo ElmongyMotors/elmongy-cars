@@ -50,12 +50,11 @@
    nav {
     background: #ffffff !important;
     display: flex;
-    flex-direction: row;
-    justify-content: center; /* Центрируем всё содержимое */
+    justify-content: center;
     align-items: center;
-    padding: 20px;
-    min-height: 120px;
+    padding: 5px 20px; /* Уменьшили внутренние отступы */
     position: relative;
+    min-height: 60px; /* БЫЛО 120px — СТАЛО 60px */
     border-bottom: 1px solid #ddd;
 }
 
@@ -95,22 +94,28 @@
     nav {
         flex-direction: column !important;
         height: auto !important;
-        padding: 15px !important;
+        padding: 10px !important; /* Уменьшили внутренний отступ */
+        min-height: auto !important; /* Убрали фиксированную высоту */
     }
     .logo-box {
-        flex-direction: column !important;
-        margin: 0 auto 10px auto !important;
+        flex-direction: row !important; /* Ставим лого и текст В ОДНУ ЛИНИЮ */
+        margin: 0 auto 5px auto !important;
+        gap: 10px !important;
     }
     .logo-box img {
-        width: 160px !important; /* Оптимальный размер для телефона */
+        width: 60px !important; /* Сильно уменьшаем логотип для компактности */
+    }
+    .logo-box span {
+        font-size: 16px !important; /* Уменьшаем текст */
     }
     .social-icons {
-        position: relative !important; /* Возвращаем в поток */
-        right: auto !important;        /* Сбрасываем привязку к правому краю */
-        top: auto !important;          /* Сбрасываем привязку к верху */
+        position: relative !important;
         margin: 0 auto !important;
-        display: flex !important;      /* Проявляем иконки */
-        justify-content: center !important;
+        display: flex !important;
+        gap: 10px !important;
+    }
+    .social-icons a {
+        font-size: 18px !important; /* Делаем иконки меньше */
     }
 }
 
@@ -246,6 +251,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -48,37 +48,47 @@
     ul li i { color: #e63946; margin-right: 10px; }
     .info-box { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #222; margin-top: 30px; }
    nav {
-      background: #000000 !important;
+       background: #ffffff !important; /* Фон стал белым */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 10px 20px;
+       position: relative;
+       min-height: 120px;
+       border-bottom: 1px solid #ddd;
+    }
+
+.logo-box {
     display: flex;
-    justify-content: center; /* ЭТО СТАВИТ ВСЁ В ЦЕНТР */
+    flex-direction: column;
     align-items: center;
-    padding: 10px 20px;
-    position: relative;
-    min-height: 140px;
-    overflow: hidden;
+    text-decoration: none;
+}
+
+.logo-box span {
+    color: #000000 !important; /* ТЕКСТ СТАЛ ЧЕРНЫМ */
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 5px;
 }
 
 .logo-box img {
-    width: 250px; /* Размер логотипа */
+    width: 250px;
     height: auto;
     display: block;
-    margin: 0 auto; /* Центровка */
-    filter: contrast(150%) brightness(110%); /* Делает красный ярче */
-    mix-blend-mode: screen; /* ПРИНУДИТЕЛЬНО УДАЛЯЕТ БЕЛЫЙ ФОН */
 }
 
 .social-icons {
     position: absolute;
-    right: 30px; /* ИКОНКИ УХОДЯТ ВПРАВО */
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     gap: 15px;
-    z-index: 10;
 }
 
 .social-icons a {
-    color: #ffffff !important;
+    color: #000000 !important; /* ИКОНКИ СТАЛИ ЧЕРНЫМИ */
     font-size: 24px;
  }
 
@@ -209,6 +219,7 @@
 
 </body>
 </html>
+
 
 
 

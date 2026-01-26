@@ -52,36 +52,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 20px; /* Уменьшили внутренние отступы */
+    padding: 0px 20px; /* УБРАЛИ ОТСТУПЫ СВЕРХУ И СНИЗУ */
     position: relative;
-    min-height: 60px; /* БЫЛО 120px — СТАЛО 60px */
+    min-height: 50px; /* ЕЩЕ МЕНЬШЕ ВЫСОТА */
     border-bottom: 1px solid #ddd;
 }
 
-.logo-box {
-    display: flex;
-    flex-direction: row; /* Лого и текст в линию */
-    align-items: center;
-    gap: 20px;
-    text-decoration: none;
-}
-
 .logo-box img {
-    width: 280px !important; /* ВЕРНУЛИ КРУПНЫЙ РАЗМЕР */
+    width: 180px !important; /* УМЕНЬШИЛИ ЛОГО (было 280px) */
     height: auto;
 }
 
 .logo-box span {
     color: #000000 !important;
-    font-size: 32px;
+    font-size: 24px; /* УМЕНЬШИЛИ ШРИФТ (было 32px) */
     font-weight: 900;
-}
-
-.social-icons {
-    position: absolute;
-    right: 30px; /* Иконки всегда справа */
-    display: flex;
-    gap: 15px;
 }
 
 .social-icons a {
@@ -98,24 +83,32 @@
         min-height: auto !important; /* Убрали фиксированную высоту */
     }
     .logo-box {
-        flex-direction: row !important; /* Ставим лого и текст В ОДНУ ЛИНИЮ */
-        margin: 0 auto 5px auto !important;
-        gap: 10px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important; /* ВЫРАВНЯЛИ ПО ЦЕНТРУ */
+    width: 100% !important;           /* Занимаем всю ширину */
+    margin: 0 auto 10px auto !important;
+    gap: 10px !important;
     }
     .logo-box img {
         width: 60px !important; /* Сильно уменьшаем логотип для компактности */
     }
-    .logo-box span {
-        font-size: 16px !important; /* Уменьшаем текст */
-    }
     .social-icons {
-        position: relative !important;
-        margin: 0 auto !important;
-        display: flex !important;
-        gap: 10px !important;
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important; /* ВЫРАВНЯЛИ ИКОНКИ */
+    width: 100% !important;             /* Растянули блок для центровки */
+    margin: 0 auto !important;
+    gap: 15px !important;
     }
     .social-icons a {
         font-size: 18px !important; /* Делаем иконки меньше */
+    }
+  header h1 {
+        font-size: 24px !important;
+    }
+    header p {
+        font-size: 14px !important;
     }
 }
 
@@ -251,6 +244,7 @@
 
 </body>
 </html>
+
 
 
 

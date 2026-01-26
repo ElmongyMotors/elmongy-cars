@@ -71,42 +71,38 @@
     font-size: 32px; /* КРУПНЫЙ ШРИФТ как у заголовка */
     font-weight: 900;
     text-transform: uppercase; /* Все буквы заглавные */
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
     nav {
         flex-direction: column !important;
         height: auto !important;
-        padding: 20px 10px !important;
+        padding: 15px !important;
+        min-height: unset !important;
     }
     .logo-box {
         flex-direction: column !important;
-        margin-bottom: 15px !important;
-        margin: 0 auto !important;
+        margin: 0 auto 10px auto !important;
+        gap: 5px !important;
+    }
+    .logo-box img {
+        width: 140px !important; /* Уменьшили лого для мобилки */
     }
     .logo-box span {
-        font-size: 24px !important;
+        font-size: 18px !important; /* Уменьшили текст */
         text-align: center;
     }
     .social-icons {
-        position: static !important;
+        position: relative !important;
+        right: auto !important;
+        top: auto !important;
         transform: none !important;
-        justify-content: center;
+        display: flex !important;
+        justify-content: center !important;
+        margin-top: 10px !important;
     }
-    letter-spacing: 1px;
-}
-
-.logo-box img {
-    width: 250px;
-    height: auto;
-    display: block;
-}
-
-.social-icons {
-    position: absolute;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    gap: 15px;
+    .social-icons a {
+        color: #000000 !important; /* Делаем иконки черными */
+        font-size: 22px !important;
+    }
 }
 
 .social-icons a {
@@ -241,6 +237,7 @@
 
 </body>
 </html>
+
 
 
 

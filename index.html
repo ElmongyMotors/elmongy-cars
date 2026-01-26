@@ -60,18 +60,19 @@
 
 .logo-box {
     display: flex;
-    flex-direction: row; /* Текст встает в линию с логотипом */
-    align-items: center; /* Выравнивание по центру по вертикали */
-    gap: 20px; /* Расстояние между картинкой и текстом */
+    flex-direction: row; /* Лого и текст в одну линию */
+    align-items: center; /* Выравнивание по высоте */
+    gap: 20px;
     text-decoration: none;
+    margin: 0 auto; /* ЭТО СТАВИТ ВЕСЬ БЛОК ПО ЦЕНТРУ */
 }
 
 .logo-box span {
     color: #000000 !important;
-    font-size: 32px; /* КРУПНЫЙ ШРИФТ как у заголовка */
+    font-size: 32px; /* Крупный шрифт как у заголовка */
     font-weight: 900;
-    text-transform: uppercase; /* Все буквы заглавные */
-    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap; /* Чтобы текст не перепрыгивал на новую строку */
 }
 
 .logo-box img {
@@ -221,6 +222,7 @@
 
 </body>
 </html>
+
 
 
 

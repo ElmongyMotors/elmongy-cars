@@ -48,52 +48,43 @@
     ul li i { color: #e63946; margin-right: 10px; }
     .info-box { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #222; margin-top: 30px; }
    nav {
-    background: #ffffff !important;
+    nav {
+    background: #ffffff !important; /* Белый фон */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 0px 20px; /* УБРАЛИ ОТСТУПЫ СВЕРХУ И СНИЗУ */
-    position: relative;
-    min-height: 50px; /* ЕЩЕ МЕНЬШЕ ВЫСОТА */
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     border-bottom: 1px solid #ddd;
 }
 
-.logo-box img {
-   width: 180px !important;
-   height: auto;
-}
-    
-.nav-links {
-    display: flex;
-    gap: 15px;
-    flex: 1;
-    justify-content: flex-start; /* Меню слева */
-}
-
 .nav-links a {
+    color: #000000 !important; /* Черный текст ссылок */
     text-decoration: none;
-    color: #ffffff !important; /* Сделали текст БЕЛЫМ */
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
-    white-space: nowrap; /* Чтобы текст не переносился */
 }
 
 .logo-box {
-    flex: 1;
     display: flex;
-    justify-content: center; /* Логотип строго по центру */
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
 }
 
-.social-icons {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end; /* Иконки справа */
-    gap: 15px;
+.logo-text {
+    color: #000000 !important; /* Черный текст названия */
+    font-size: 18px;
+    font-weight: 900;
 }
 
 .social-icons a {
-    color: #ffffff !important; /* Иконки тоже БЕЛЫЕ */
+    color: #000000 !important; /* Черные иконки */
+    font-size: 24px;
+    margin-left: 15px;
 }
     
 /* ИСПРАВЛЕНИЕ ДЛЯ МОБИЛОК */
@@ -279,6 +270,7 @@
 
 </body>
 </html>
+
 
 
 

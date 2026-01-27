@@ -64,29 +64,38 @@
 }
     
 .nav-links {
- display: flex;
- gap: 20px;
- flex: 1;
+    display: flex;
+    gap: 15px;
+    flex: 1;
+    justify-content: flex-start; /* Меню слева */
 }
-    
-.nav-links a {
-  text-decoration: none;
-  color: #000 !important;
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
 
-.logo-box span {
-    color: #000000 !important;
-    font-size: 24px; /* УМЕНЬШИЛИ ШРИФТ (было 32px) */
-    font-weight: 900;
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff !important; /* Сделали текст БЕЛЫМ */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap; /* Чтобы текст не переносился */
+}
+
+.logo-box {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Логотип строго по центру */
+}
+
+.social-icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Иконки справа */
+    gap: 15px;
 }
 
 .social-icons a {
-    color: #000000 !important;
-    font-size: 28px; /* Сделали иконки крупнее */
+    color: #ffffff !important; /* Иконки тоже БЕЛЫЕ */
 }
-
+    
 /* ИСПРАВЛЕНИЕ ДЛЯ МОБИЛОК */
 @media (max-width: 768px) {
     nav {
@@ -171,26 +180,25 @@
     </style>
   </head>
 <body>
- <nav>
-   <div class="nav-links">
-     <a href="#order">Расчет стоимости</a>
-     <a href="#about">О компании</a>
-     <a href="#process">Процесс покупки</a>
-     <a href="#catalog">Каталог</a>
-   </div>
+<nav>
+  <div class="nav-links">
+    <a href="#order">Расчет</a>
+    <a href="#about">О нас</a>
+    <a href="#process">Процесс</a>
+    <a href="#catalog">Каталог</a>
+  </div>
 
-   <a href="#" class="logo-box">
-     <img src="00000-_3_.png" alt="Logo">
-     <span style="font-weight:900;">ELMONGY MOTORS</span>
-   </a>
+  <a href="#" class="logo-box">
+    <img src="00000-_3_.png" alt="Logo">
+    <span class="logo-text">ELMONGY MOTORS</span>
+  </a>
 
-   <div class="social-icons">
-     <a href="https://api.whatsapp.com/send/?phone=821051068878" target="_blank"><i class="fab fa-whatsapp"></i></a>
-     <a href="https://t.me/elmongy12" target="_blank"><i class="fab fa-telegram"></i></a>
-     <a href="https://instagram.com/elmongy_russia" target="_blank"><i class="fab fa-instagram"></i></a>
-     <a href="https://vk.com/elmongy_motors" target="_blank"><i class="fab fa-vk"></i></a>
-   </div>
- </nav>
+  <div class="social-icons">
+    <a href="https://api.whatsapp.com/send/?phone=821051068878" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://t.me/elmongy12" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://vk.com/elmongy_motors" target="_blank"><i class="fab fa-vk"></i></a>
+  </div>
+</nav>
 
 <header>
   <h1>ЭКСПОРТ <span class="accent">АВТОМОБИЛЕЙ</span></h1>
@@ -271,6 +279,7 @@
 
 </body>
 </html>
+
 
 
 

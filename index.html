@@ -59,9 +59,22 @@
 }
 
 .logo-box img {
-    width: 180px !important; /* УМЕНЬШИЛИ ЛОГО (было 280px) */
-    height: auto;
+   width: 180px !important;
+   height: auto;
 }
+    
+.nav-links {
+ display: flex;
+ gap: 20px;
+ flex: 1;
+}
+    
+.nav-links a {
+  text-decoration: none;
+  color: #000 !important;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
 
 .logo-box span {
     color: #000000 !important;
@@ -158,26 +171,33 @@
     </style>
   </head>
 <body>
+ <nav>
+   <div class="nav-links">
+     <a href="#order">Расчет стоимости</a>
+     <a href="#about">О компании</a>
+     <a href="#process">Процесс покупки</a>
+     <a href="#catalog">Каталог</a>
+   </div>
 
-<nav>
-  <a href="#" class="logo-box">
-    <img src="00000-_3_.png" alt="Logo">
-    <span style="font-weight:900;">ELMONGY MOTORS</span>
-  </a>
-  <div class="social-icons">
-    <a href="https://api.whatsapp.com/send/?phone=821012345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://t.me/elmongy12" target="_blank"><i class="fab fa-telegram"></i></a>
-    <a href="https://instagram.com/elmongy_russia" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://vk.com/elmongy_motors" target="_blank"><i class="fab fa-vk"></i></a>
-  </div>
-</nav>
+   <a href="#" class="logo-box">
+     <img src="00000-_3_.png" alt="Logo">
+     <span style="font-weight:900;">ELMONGY MOTORS</span>
+   </a>
+
+   <div class="social-icons">
+     <a href="https://api.whatsapp.com/send/?phone=821051068878" target="_blank"><i class="fab fa-whatsapp"></i></a>
+     <a href="https://t.me/elmongy12" target="_blank"><i class="fab fa-telegram"></i></a>
+     <a href="https://instagram.com/elmongy_russia" target="_blank"><i class="fab fa-instagram"></i></a>
+     <a href="https://vk.com/elmongy_motors" target="_blank"><i class="fab fa-vk"></i></a>
+   </div>
+ </nav>
 
 <header>
   <h1>ЭКСПОРТ <span class="accent">АВТОМОБИЛЕЙ</span></h1>
   <p>НАПРЯМУЮ ИЗ ЮЖНОЙ КОРЕИ</p>
 </header>
 
-<section>
+<section id="catalog">
   <div class="car-grid">
     <div class="car-card">
       <img src="hyundai (2).jpg" alt="Hyundai Palisade">
@@ -247,6 +267,7 @@
 
 </body>
 </html>
+
 
 
 

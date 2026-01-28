@@ -74,13 +74,27 @@
 }
 
 .logo-box {
-    flex: 0; /* Фиксируется в центре */
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px; /* Расстояние между картинкой и текстом */
     text-decoration: none;
+    flex: 0 1 auto; /* Не дает логотипу сжиматься */
 }
 
+.logo-box img {
+    height: 70px; /* Увеличили высоту иконки (было 50px) */
+    width: auto;
+    transition: transform 0.3s;
+}
+
+.logo-text {
+    color: #000000 !important;
+    font-size: 28px; /* Крупный размер */
+    font-weight: 900; /* Максимальная жирность, как у основного заголовка */
+    text-transform: uppercase; /* Все буквы заглавные */
+    letter-spacing: -1px; /* Плотное написание */
+    line-height: 1;
+}
 .social-icons {
     flex: 1; /* Занимает правую часть */
     display: flex;
@@ -185,14 +199,15 @@
     <a href="#catalog">Каталог</a>
   </div>
 
-  <a href="#" class="logo-box">
+<a href="#" class="logo-box">
     <img src="00000-_3_.png" alt="Logo">
     <span class="logo-text">ELMONGY MOTORS</span>
-  </a>
+</a>
 
   <div class="social-icons">
     <a href="https://api.whatsapp.com/send/?phone=821051068878" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="https://t.me/elmongy12" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://instagram.com/elmongy_russia" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://vk.com/elmongy_motors" target="_blank"><i class="fab fa-vk"></i></a>
   </div>
 </nav>
@@ -280,6 +295,7 @@
 
 </body>
 </html>
+
 
 
 

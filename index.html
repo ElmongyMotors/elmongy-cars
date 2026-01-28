@@ -47,11 +47,10 @@
     ul li { margin-bottom: 12px; }
     ul li i { color: #e63946; margin-right: 10px; }
     .info-box { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #222; margin-top: 30px; }
-   nav {
-    nav {
-    background: #ffffff !important; /* Белый фон */
+  nav {
+    background: #ffffff !important;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Распределяет блоки: лево, центр, право */
     align-items: center;
     padding: 10px 5%;
     position: sticky;
@@ -60,8 +59,14 @@
     border-bottom: 1px solid #ddd;
 }
 
+.nav-links {
+    flex: 1; /* Занимает левую часть */
+    display: flex;
+    gap: 20px;
+}
+
 .nav-links a {
-    color: #000000 !important; /* Черный текст ссылок */
+    color: #000000 !important;
     text-decoration: none;
     font-size: 13px;
     font-weight: 700;
@@ -69,22 +74,23 @@
 }
 
 .logo-box {
+    flex: 0; /* Фиксируется в центре */
     display: flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
 }
 
-.logo-text {
-    color: #000000 !important; /* Черный текст названия */
-    font-size: 18px;
-    font-weight: 900;
+.social-icons {
+    flex: 1; /* Занимает правую часть */
+    display: flex;
+    justify-content: flex-end; /* Прижимает иконки к правому краю */
+    gap: 15px;
 }
 
 .social-icons a {
-    color: #000000 !important; /* Черные иконки */
+    color: #000000 !important;
     font-size: 24px;
-    margin-left: 15px;
 }
     
 /* ИСПРАВЛЕНИЕ ДЛЯ МОБИЛОК */
@@ -197,27 +203,31 @@
 </header>
 
 <section id="catalog">
-  <div class="car-grid">
+ <div class="car-grid">
     <div class="car-card">
-      <img src="hyundai (2).jpg" alt="Hyundai Palisade">
-      <h3>Hyundai Palisade 2026</h3>
-      <div class="price">8.280.00 млн руб.</div>
+        <img src="hyundai (2).jpg" alt="Hyundai Palisade">
+        <h3>Hyundai Palisade 2026</h3>
+        <div class="price">8.280.000 руб.</div>
     </div>
+
     <div class="car-card">
-  <img src="range.jpg.png" alt="Range Rover D350"> <h3>Range Rover D350 Autobiography LWB 2024</h3>
-  <div class="price">19.750.000 руб.</div>
+        <img src="range.jpg.png" alt="Range Rover D350">
+        <h3>Range Rover D350 Autobiography LWB 2024</h3>
+        <div class="price">19.900.000 руб.</div>
+    </div>
+
+    <div class="car-card">
+        <img src="tucson.jpg (2).jpg" alt="Hyundai Tucson">
+        <h3>Hyundai Tucson N Line 2026</h3>
+        <div class="price">4.500.000 руб.</div>
+    </div>
+
+    <div class="car-card">
+        <img src="kia.jpg (2).jpg" alt="Kia Carnival">
+        <h3>Kia Carnival Hybrid 2026</h3>
+        <div class="price">6.140.000 руб.</div>
+    </div>
 </div>
-    <div class="car-card">
-      <img src="tucson.jpg (2).jpg" alt="Hyundai Tucson">
-      <h3>Hyundai Tucson N Line 2026</h3>
-      <div class="price">4.500.00 млн руб.</div>
-    </div>
-    <div class="car-card">
-      <img src="kia.jpg (2).jpg" alt="Kia Carnival">
-      <h3>Kia Carnival Hybrid 2026</h3>
-      <div class="price">6.140.000 млн руб.</div>
-    </div>
-  </div>
 
   <div class="form-container" id="order">
     <h2>Рассчитать стоимость</h2>
@@ -270,6 +280,7 @@
 
 </body>
 </html>
+
 
 
 

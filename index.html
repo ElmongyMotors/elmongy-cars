@@ -112,39 +112,55 @@
     nav {
         flex-direction: column !important;
         height: auto !important;
-        padding: 10px !important; /* Уменьшили внутренний отступ */
-        min-height: auto !important; /* Убрали фиксированную высоту */
+        padding: 15px 10px !important;
+        gap: 12px !important;
     }
+
     .logo-box {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important; /* ВЫРАВНЯЛИ ПО ЦЕНТРУ */
-    width: 100% !important;           /* Занимаем всю ширину */
-    margin: 0 auto 10px auto !important;
-    gap: 10px !important;
+        order: 1; /* Логотип наверх */
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0 !important;
     }
+
     .logo-box img {
-        width: 60px !important; /* Сильно уменьшаем логотип для компактности */
+        height: 45px !important; /* Делаем компактнее */
+        width: auto !important;
     }
+
+    .logo-text {
+        font-size: 18px !important; /* Название в одну строку */
+        font-weight: 900;
+    }
+
+    .nav-links {
+        order: 2; /* Ссылки под логотипом */
+        justify-content: center !important;
+        width: 100% !important;
+        gap: 8px !important;
+    }
+
+    .nav-links a {
+        font-size: 11px !important; 
+        padding: 6px 10px;
+        background: #f0f0f0; /* Кнопочки для удобства нажатия */
+        border-radius: 4px;
+        white-space: nowrap;
+    }
+
     .social-icons {
-    position: relative !important;
-    display: flex !important;
-    justify-content: center !important; /* ВЫРАВНЯЛИ ИКОНКИ */
-    width: 100% !important;             /* Растянули блок для центровки */
-    margin: 0 auto !important;
-    gap: 15px !important;
-    }
-    .social-icons a {
-        font-size: 18px !important; /* Делаем иконки меньше */
-    }
-  header h1 {
-        font-size: 24px !important;
-    }
-    header p {
-        font-size: 14px !important;
+        order: 3; /* Соцсети в самый низ */
+        justify-content: center !important;
+        width: 100% !important;
+        margin-top: 5px !important;
+        gap: 20px !important;
     }
 }
 
+/* Фикс для точного перехода по ссылкам, чтобы меню не закрывало заголовок */
+section {
+    scroll-margin-top: 160px; 
+}
 .social-icons a {
     color: #000000 !important; /* ИКОНКИ СТАЛИ ЧЕРНЫМИ */
     font-size: 24px;
@@ -295,6 +311,7 @@
 
 </body>
 </html>
+
 
 
 

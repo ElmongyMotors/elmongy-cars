@@ -33,8 +33,33 @@
   display: none !important;
 }
 
-    header { background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=2070'); background-size: cover; background-position: center; padding: 60px 5% 30px; text-align: center; }
-    h1 { font-size: 32px; font-weight: 900; text-transform: uppercase; margin: 0; }
+    header { 
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=2070'); 
+    background-size: cover; 
+    background-position: center; 
+    padding: 60px 5% 30px; 
+    text-align: center;
+    display: flex;             /* Включаем гибкий контейнер */
+    flex-direction: column;    /* Выстраиваем элементы сверху вниз */
+    align-items: center;       /* Центрируем всё по горизонтали */
+}
+    header a {
+    font-size: 24px !important;    /* Сделает текст крупнее */
+    text-decoration: none !important; /* УБИРАЕТ ПОДЧЕРКИВАНИЕ */
+    color: #ff4d4d !important;    /* Цвет текста (красный) */
+    font-weight: 800;              /* Жирный шрифт */
+    border: 2px solid #ff4d4d;    /* Делает кнопку с рамкой */
+    padding: 12px 35px;            /* Делает кнопку объемной */
+    border-radius: 50px;           /* Округлые края */
+    display: inline-block;         /* Чтобы отступы работали корректно */
+    margin-top: 25px;              /* Отодвигает кнопку от текста "Напрямую из Южной Кореи" */
+    transition: 0.3s;              /* Плавное изменение цвета */
+}
+
+header a:hover {
+    background: #ff4d4d;           /* Кнопка закрашивается при наведении */
+    color: #fff !important;        /* Текст становится белым */
+}
     .accent { color: #e63946; }
 
     section { padding: 30px 5%; max-width: 1200px; margin: 0 auto; }
@@ -347,6 +372,7 @@ html {
 
 </body>
 </html>
+
 
 
 

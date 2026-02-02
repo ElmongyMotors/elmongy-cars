@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elmongy Motors — Авто из Кореи</title>
     
-    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.js"></script>
-    <script>
-      vkBridge.send('VKWebAppInit');
-    </script>
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.js"></script>
+<script>
+  vkBridge.send('VKWebAppInit');
+
+  // Проверяем, что приложение открыто внутри VK
+  vkBridge.send('VKWebAppGetLaunchParams')
+    .then(() => {
+      document.body.classList.add('vk-app');
+    })
+    .catch(() => {});
+</script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
 <style>
     body {
     background-color: #000000 !important;
@@ -23,6 +29,9 @@
     .logo-box { display: flex; align-items: center; text-decoration: none; color: #fff; }
     .logo-box img { height: 35px; margin-right: 10px; }
     .social-icons a { color: #fff; font-size: 18px; margin-left: 15px; text-decoration: none; }
+    .vk-app .social-icons {
+  display: none !important;
+}
 
     header { background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=2070'); background-size: cover; background-position: center; padding: 60px 5% 30px; text-align: center; }
     h1 { font-size: 32px; font-weight: 900; text-transform: uppercase; margin: 0; }
@@ -222,29 +231,18 @@ html {
   </head>
 <body>
 <nav>
-  <div class="nav-links">
-    <a href="#order">Расчет</a>
-    <a href="#about">О нас</a>
-    <a href="#process">Процесс</a>
-    <a href="#catalog">Каталог</a>
-  </div>
 
 <a href="#" class="logo-box">
     <img src="00000-_3_.png" alt="Logo">
     <span class="logo-text">ELMONGY MOTORS</span>
 </a>
 
-  <div class="social-icons">
-    <a href="https://api.whatsapp.com/send/?phone=821051068878" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://t.me/elmongy12" target="_blank"><i class="fab fa-telegram"></i></a>
-    <a href="https://instagram.com/elmongy_russia" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://vk.com/elmongy_motors" target="_blank"><i class="fab fa-vk"></i></a>
-  </div>
 </nav>
 
 <header>
   <h1>ЭКСПОРТ <span class="accent">АВТОМОБИЛЕЙ</span></h1>
   <p>НАПРЯМУЮ ИЗ ЮЖНОЙ КОРЕИ</p>
+  <a href="#order" class="cta-btn">Подобрать автомобиль</a>
 </header>
 
 <section id="catalog">
@@ -349,6 +347,7 @@ html {
 
 </body>
 </html>
+
 
 
 
